@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Portfolio</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <header><h1>Documentation - Portfolio</h1></header>
+
+        <section><p>
+            A configurable minimalist portfolio website for showcasing different types of projects.<br/>
+            Built by <a href="https://github.com/mufasa159" target="_blank">@mufasa159</a> with performance in mind.<br/>
+            Licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GNU GPL v3.0</a> license.
+        </p></section>
+
+        <section><p>
+            <a href="https://github.com/mufasa159/portfolio" target="_blank">Github Repository</a>
+            &nbsp;•&nbsp; 
+            <a href="https://mufasa159.github.io/portfolio" target="_blank">Live Demo</a>
+        </p></section>
+
+        <section>
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#performance">Performance</a></li>
+                <li><a href="#getting-started">Getting Started</a></li>
+                <li>
+                    <a href="#configuration">Configuration</a>
+                    <ul>
+                        <li><a href="#config-general">General Information</a></li>
+                        <li><a href="#config-identity">Website Identity</a></li>
+                        <li><a href="#config-content">Portfolio Content</a></li>
+                        <li><a href="#config-seo">SEO-related Items</a></li>
+                        <li><a href="#config-appearance">Appearance</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#data-models">Data Models</a>
+                    <ul>
+                        <li><a href="#data-home">home.json</a></li>
+                        <li><a href="#data-portfolio">portfolio.json</a></li>
+                        <li><a href="#data-routers">routers.json</a></li>
+                        <li>
+                            <a href="#data-components">Components</a>
+                            <ul>
+                                <li><a href="#components-blog">Blog</a></li>
+                                <li><a href="#components-cards">Cards</a></li>
+                                <li><a href="#components-gallery">Gallery</a></li>
+                                <li><a href="#components-projects">Projects</a></li>
+                                <li><a href="#components-showcase">Showcase</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#contributing">Deployment</a></li>
+                <li><a href="#contributing">Contribution</a></li>
+                <li><a href="#acknowledgement">Acknowledgement</a></li>
+            </ul>
+        </section>
+
+        <section id="features">
+            <h2>Features</h2>
+            <p>Work in progress...</p>
+        </section>
+
+        <section id="performance">
+            <h2>Performance</h2>
+            <p>
+                The website is built with performance in mind. It is optimized for
+                speed and SEO. More information on performance optimization will be
+                added soon.
+            </p>
+        </section>
+
+        <section id="getting-started">
+            <h2>Getting Started</h2>
+            <ol>
+                <li>
+                    <p>
+                        Clone the repository to your local machine using the following command:
+                    </p>
+                    <pre><code>git clone https://github.com/mufasa159/portfolio.git</code></pre>
+                </li>
+                <li>
+                    <p>
+                        Modify the content of the website to your preference. See the 
+                        <a href="#configuration">Configuration</a> section for more information.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Deploy the website to a static hosting service or your own server. 
+                        See the <a href="#deployment">Deployment</a> section for more information.
+                    </p>
+                </li>
+            </ol>
+        </section>
+
+        <section id="configuration">
+            <a href="#configuration"><h2>Configuration</h2></a>
+
+            <section id="config-general">
+                <h3>General Information</h3>
+                <p>
+                    The <code>index.html</code> file contains some hardcoded data that needs 
+                    to be modified to your own preference.
+                </p>
+                <ol>
+                    <li>The page title of the website</li>
+                    <li>Meta tags for SEO</li>
+                    <li>Copyright notice in the footer</li>
+                </ol>
+                <p>
+                    The locations of the above items in the <code>index.html</code> file have
+                    been highlighted with comments.
+                </p>
+            </section>
+
+            <section id="config-identity">
+                <h3>Website Identity</h3>
+                <p>
+                    The icons of the website are located in <code>/assets</code> directory. 
+                    Replace them with your own icons and images. Make sure to keep the same 
+                    filename with <code>.webp</code> and <code>.ico</code> extensions.
+                </p>
+                <p>
+                    Note: if you have images in <code>jpg</code>, <code>png</code>, <code>heic</code> 
+                    or any other file types, convert them to <code>webp</code> and 
+                    <code>ico</code> files for better performance.
+                </p>
+            </section>
+
+            <section id="config-content">
+                <h3>Portfolio Content</h3>
+                <p>
+                    All the content of the portfolio are stored in <code>/data</code> directory.
+                    The <a href="#data-models">Data Models</a> section has more information
+                    on data model of each JSON file.
+                </p>
+                <table>
+                    <tr>
+                        <th>Filepath</th>
+                        <th>Content</th>
+                    </tr>
+                    <tr>
+                        <td><code>/data/home.json</code></td>
+                        <td>Homepage introduction sentences</td>
+                    </tr>
+                    <tr>
+                        <td><code>/data/portfolio.json</code></td>
+                        <td>Portfolio content</td>
+                    </tr>
+                    <tr>
+                        <td><code>/data/routers.json</code></td>
+                        <td>
+                            Route mapping of blog articles if you choose to include any. 
+                            If you are not adding any blog articles to your portfolio, 
+                            keep this file empty.
+                        </td>
+                    </tr>
+                </table>
+
+                <p>
+                    For the following directories, it's not required to keep your data in
+                    the exact locations as listed. You can create subdirectories and organize
+                    your files as you see fit. Just make sure to update the filepaths in the
+                    JSON files.
+                </p>
+                <table>
+                    <tr>
+                        <th>Filepath</th>
+                        <th>Content</th>
+                    </tr>
+                    <tr>
+                        <td><code>/data/blog</code></td>
+                        <td>Blog articles as HTML files</td>
+                    </tr>
+                    <tr>
+                        <td><code>/data/blog/images</code></td>
+                        <td>Images for blog articles</td>
+                    </tr>
+                    <tr>
+                        <td><code>/data/blog/videos</code></td>
+                        <td>Videos for blog articles</td>
+                    </tr>
+                    <tr>
+                        <td><code>/data/cards</code></td>
+                        <td>Images for cards</td>
+                    </tr>
+                    <tr>
+                        <td><code>/data/gallery</code></td>
+                        <td>Full-sized gallery images</td>
+                    </tr>
+                    <tr>
+                        <td><code>/data/gallery/thumbnails</code></td>
+                        <td>Thumbnails of gallery images</td>
+                    </tr>
+                    <tr>
+                        <td><code>/data/showcase</code></td>
+                        <td>Media files for showcase component(s)</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="config-seo">
+                <h3>SEO-related Items</h3>
+                <p>
+                    To improve the website's visibility to search engines, modify the 
+                    following files as needed for the web crawlers.
+                </p>
+                <ol>
+                    <li>
+                        <code>sitemap.xml</code> &nbsp;
+                        <a href="https://developers.google.com/search/docs/advanced/sitemaps/overview" target="_blank">Learn more</a>
+                    </li>
+                    <li>
+                        <code>robots.txt</code> &nbsp;
+                        <a href="https://developers.google.com/search/docs/advanced/robots/intro" target="_blank">Learn more</a>
+                    </li>
+                </ol>
+            </section>
+
+            <section id="config-appearance">
+                <h3>Appearance</h3>
+                <p>
+                    Need dark mode? Or the site theme just doesn't match your style?
+                    No worries! You can modify the color scheme and the font of the website by
+                    changing the CSS variables in the <code>/css/variables.css</code> file.
+                </p>
+                <p>
+                    If you want to experiment with different styling for the components,
+                    the CSS files for each component can be found in the
+                    <code>/css/components</code> directory. Although it is advised to not
+                    go crazy with the styling as it may affect the performance of the
+                    website and go against the minimalist design principle.
+                </p>
+            </section>
+        </section>
+
+        <section id="data-models">
+            <a href="#data-models"><h2>Data Models</h2></a>
+
+            <section id="data-home">
+                <h3>home.json</h3>
+                <p>
+                    The object in <code>/data/home.json</code> file contains the following fields:  
+                </p>
+                <pre><code>greeting: string,
+introduction: {
+    line_1: string,
+    line_2: string
+}</code></pre>
+                <p>
+                    <code>greeting</code> contains a short greeting message to the user. Only
+                    a maximum of 50 characters are allowed.<br/>
+                    <code>introduction</code> contains two lines of introduction sentences to describe
+                    your portfolio or talk about yourself. Each line can contain a maximum of 90
+                    characters.
+                </p>
+                <p>
+                    HTML tags such as 
+                    <code>&#60;a&#62;</code>
+                    <code>&#60;b&#62;</code>
+                    <code>&#60;i&#62;</code>
+                    <code>&#60;s&#62;</code>
+                    <code>&#60;u&#62;</code>
+                    etc. can be inserted to both
+                    <code>greeting</code> and <code>introduction</code> fields
+                    for text formatting purposes. Any change you make in this file will be
+                    reflected in the homepage of the website.
+                </p>
+            </section>
+
+            <section id="data-portfolio">
+                <h3>portfolio.json</h3>
+                <p>
+                    The <code>/data/portfolio.json</code> file contains an <i>array</i> of the 
+                    following objects:
+                </p>
+                <pre><code>{
+    title: string, 
+    component: 'blog' | 'cards' | 'gallery' | 'projects' | 'showcase',
+    items: any[]
+}</code></pre>
+                <p>
+                    <code>title</code> contains the title of the portfolio section which will be
+                    displayed as text on the navigation buttons.<br/>
+                    <code>component</code> is a string that specifies the type of component to be
+                    rendered. The are only 5 available components.<br/>
+                    <code>items</code> is an array of objects that contains the content of the
+                    component. See <a href="#data-components">components</a> section for the data model 
+                    of <code>items</code> array for each component.
+                </p>
+            </section>
+
+            <section id="data-routers">
+                <h3>routers.json</h3>
+                <p>
+                    The <code>/data/routers.json</code> file contains an object that maps
+                    the route of the blog articles to the corresponding HTML file.
+                </p>
+                <pre><code>{
+    "route-1": "/path/to/html/file-1.html",
+    "route-2": "/path/to/html/file-2.html",
+    ...
+}</code></pre>
+                <p>
+                    This way, when a user clicks on a blog article, the corresponding HTML file
+                    will be rendered. The routes are specified in search query of the URL to fetch
+                    article on page load.
+                </p>
+                <p>
+                    For example: If a blog article with <code>id</code> of
+                    <code>route-1</code> is clicked, the HTML file at <code>/path/to/html/file-1.html</code>
+                    will be rendered when the user visits <code>https://your-website.com/?article=route-1</code>
+                </p>
+                    
+                <p>
+                    If you are not using the <code>blog</code> component in your portfolio, you can also
+                    utilize this file to map other routes to different HTML files. For example, you can
+                    map any of your <code>showcase</code> project URLs to an article containing more
+                    information about the project.
+                </p>
+            </section>
+
+            <section id="data-components">
+                <h3>Components</h3>
+                <p>
+                    The <code>items</code> array in the <code>/data/portfolio.json</code> file
+                    for each component contains the following fields:
+                </p>
+
+                <h4 id="components-blog">Blog</h4>
+                <pre><code>id: string
+heading: string
+</code></pre>
+                <p>
+                    For each blog article, create an HTML file in the <code>/data/blog</code> directory
+                    (or wherever you choose to store your blog articles). Then create an entry in
+                    <code>/data/routers.json</code> file mapping the <code>id</code> to the filepath of 
+                    the HTML file. For example:
+                </p>
+                
+                <p>
+                    If your blog article entry in <code>/data/portfolio.json</code> is
+                    <pre><code>id: "my-first-blog",
+heading: "My First Blog Article"</code></pre>
+                    and the HTML file is stored in <code>/data/blog/my-first-blog.html</code>.
+                    Then the entry in <code>/data/routers.json</code> should be:
+                    <pre><code>{
+    "my-first-blog": "/data/blog/my-first-blog.html"
+}</code></pre>
+                    For the HTML file, make sure to only include the content of the blog article. The 
+                    <code>&#60;head&#62;</code> and <code>&#60;body&#62;</code> tags are already included in the 
+                    <code>index.html</code> file and is not required in the blog article HTML files.
+                </p>
+
+                
+                <h4 id="components-cards">Cards</h4>
+                <pre><code>alt: string
+image: string
+name: string
+url: string
+</code></pre>
+                <h4 id="components-gallery">Gallery</h4>
+                <pre><code>id: string                // must be unique
+alt: string               // alt text for the image
+image: string             // filepath of the full-sized image
+thumbnail: string         // filepath of the thumbnail
+description: string = ''  // optional, HTML tags allowed
+</code></pre>
+
+                <h4 id="components-projects">Projects</h4>
+                <pre><code>name: string
+url: string
+description: string
+</code></pre>
+
+                <h4 id="components-showcase">Showcase</h4>
+                <pre><code>alt: string
+image: string
+name: string
+url: string
+</code></pre>
+            </section>
+        </section>
+
+        <section id="deployment">
+            <a href="#deployment"><h2>Deployment</h2></a>
+            <p>
+                The website is built using plain HTML, CSS, and JS. Since there are no server-side
+                code, the website can be deployed on any static hosting service such as
+                <ul>
+                    <li><a href="https://pages.github.com/" target="_blank">Github Pages</a></li>
+                    <li><a href="https://www.netlify.com/" target="_blank">Netlify</a></li>
+                    <li><a href="https://vercel.com/" target="_blank">Vercel</a></li>
+                    <li><a href="https://render.com">Render</a></li>
+                </ul>
+            </p>
+            <p>
+                Or, if you wish to host the website on your own server, simply upload the files
+                to the server and the website will be live. No need to install any dependencies.
+                You may use a web server such as <a href="https://httpd.apache.org/" target="_blank">Apache</a>
+                or <a href="https://www.nginx.com/" target="_blank">Nginx</a> to serve the files.
+            </p>
+        </section>
+
+        <section id="contribution">
+            <a href="#contribution"><h2>Contribution</h2></a>
+            <p>
+                Contributions are welcome! If you have any suggestions or found a bug, please 
+                create an issue on the 
+                <a href="https://github.com/mufasa159/portfolio">GitHub repository</a>. I'll try
+                my best to address it as soon as possible. You can also request a feature or
+                submit a pull request.
+            </p>
+        </section>
+
+        <section id="acknowledgement">
+            <a href="#acknowledgement"><h2>Acknowledgement</h2></a>
+            <p><a href="https://github.com">mufasa159</a></p>
+        </section>
+
+        <section>
+            <p><small>
+                &copy; 2024 Muhfasul Alam. All rights reserved • Last updated: June 21, 2024
+            </small></p>
+        </section>
+    </div>
+</body>
+</html>
